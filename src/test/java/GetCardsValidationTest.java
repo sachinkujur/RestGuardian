@@ -1,3 +1,5 @@
+import arguments.AuthValidationArgumentsHolder;
+import arguments.AuthValidationArgumentsProvider;
 import arguments.CardIdValidationArgumentsHolder;
 import arguments.CardIdValidationArgumentsProvide;
 import io.restassured.module.jsv.JsonSchemaValidator;
@@ -24,9 +26,11 @@ public class GetCardsValidationTest extends BaseTest {
         Assertions.assertEquals(validationArguments.getErrorMessage(), response.body().asString());
     }
 
-    @Test
-    public void checkGetCardWithInvalidAuth() {
+    @ParameterizedTest
+    @ArgumentsSource(AuthValidationArgumentsProvider.class)
+    public void checkGetCardWithInvalidAuth(AuthValidationArgumentsHolder validationArguments) {
         Response response = requestWithoutAuth()
+                .queryParams(validationArguments.getAuthparams())
                 .pathParam("id", "64de10a02fea9c85563a7038")
                 .get("/1/cards/{id}");
         response
