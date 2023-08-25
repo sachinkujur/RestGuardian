@@ -1,22 +1,27 @@
+import arguments.CardIdValidationArgumentsHolder;
+import arguments.CardIdValidationArgumentsProvide;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 
 import java.util.Map;
 
 public class GetCardsValidationTest extends BaseTest {
 
-    @Test
-    public void checkGetCardWithInvalidId() {
+    @ParameterizedTest
+    @ArgumentsSource(CardIdValidationArgumentsProvide.class)
+    public void checkGetCardWithInvalidId(CardIdValidationArgumentsHolder validationArguments) {
         Response response = requestWithAuth()
-                .pathParam("id", "invalid")
+                .pathParams(validationArguments.getPathParams())
                 .get("/1/cards/{id}");
         response
                 .then()
-                .statusCode(400);
-        Assertions.assertEquals("invalid id", response.body().asString());
+                .statusCode(validationArguments.getStatusCode());
+        Assertions.assertEquals(validationArguments.getErrorMessage(), response.body().asString());
     }
 
     @Test

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GetCardsValidationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-08-25T10:21:24" hostname="MDEVPC-157" time="9.841">
+  <properties/>
+  <testcase name="checkGetCardWithInvalidAuth()" classname="GetCardsValidationTest" time="3.826"/>
+  <testcase name="checkGetCard()" classname="GetCardsValidationTest" time="2.322"/>
+  <testcase name="checkGetCards()" classname="GetCardsValidationTest" time="0.648"/>
+  <testcase name="checkGetCardWithAnotherUserCredentials()" classname="GetCardsValidationTest" time="0.595"/>
+  <testcase name="[1] arguments.CardIdValidationArgumentsHolder@7a572ea0" classname="GetCardsValidationTest" time="1.671"/>
+  <testcase name="[2] arguments.CardIdValidationArgumentsHolder@5d66ae3a" classname="GetCardsValidationTest" time="0.755"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
