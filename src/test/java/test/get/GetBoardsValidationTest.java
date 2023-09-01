@@ -33,7 +33,7 @@ public class GetBoardsValidationTest extends BaseTest {
     @ArgumentsSource(AuthValidationArgumentsProvider.class)
     public void checkGetBoardWithInvalidAuth(AuthValidationArgumentsHolder validationArguments) {
         Response response = requestWithoutAuth()
-                .queryParams(validationArguments.getAuthparams())
+                .queryParams(validationArguments.getAuthParams())
                 .pathParam("id", UrlParamValues.EXISTING_BOARD_ID)
                 .get(BoardsEndpoints.GET_BOARD_URL);
         response

@@ -33,7 +33,7 @@ public class GetCardsValidationTest extends BaseTest {
     @ArgumentsSource(AuthValidationArgumentsProvider.class)
     public void checkGetCardWithInvalidAuth(AuthValidationArgumentsHolder validationArguments) {
         Response response = requestWithoutAuth()
-                .queryParams(validationArguments.getAuthparams())
+                .queryParams(validationArguments.getAuthParams())
                 .pathParam("id", UrlParamValues.EXISTING_CARD_ID)
                 .get(CardsEndpoints.GET_CARD_URL);
         response

@@ -11,19 +11,22 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public class AuthValidationArgumentsProvider implements ArgumentsProvider {
+
     @Override
-    public Stream provideArguments(ExtensionContext extensionContext) {
+    public Stream provideArguments(ExtensionContext context) {
         return Stream.of(
                 new AuthValidationArgumentsHolder(
                         Collections.emptyMap(),
-                        "invalid key"),
+                        "invalid key"
+                ),
                 new AuthValidationArgumentsHolder(
                         Map.of("key", UrlParamValues.VALID_KEY),
-                        "invalid key"),
+                        "invalid key"
+                ),
                 new AuthValidationArgumentsHolder(
                         Map.of("token", UrlParamValues.VALID_TOKEN),
-                        "invalid key")
+                        "invalid key"
+                )
         ).map(Arguments::of);
-
     }
 }
