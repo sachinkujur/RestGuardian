@@ -15,14 +15,14 @@ public class AuthValidationArgumentsProvider implements ArgumentsProvider {
     public Stream provideArguments(ExtensionContext extensionContext) {
         return Stream.of(
                 new AuthValidationArgumentsHolder(
-                        Collections.emptyMap()
-                ),
+                        Collections.emptyMap(),
+                        "invalid key"),
                 new AuthValidationArgumentsHolder(
-                        Map.of("key", UrlParamValues.VALID_KEY)
-                ),
+                        Map.of("key", UrlParamValues.VALID_KEY),
+                        "invalid key"),
                 new AuthValidationArgumentsHolder(
-                        Map.of("token", UrlParamValues.VALID_TOKEN)
-                )
+                        Map.of("token", UrlParamValues.VALID_TOKEN),
+                        "invalid key")
         ).map(Arguments::of);
 
     }
