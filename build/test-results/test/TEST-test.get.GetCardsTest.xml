@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.get.GetCardsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-08-28T06:33:23" hostname="MDEVPC-157" time="1.391">
-  <properties/>
-  <testcase name="checkGetCard()" classname="test.get.GetCardsTest" time="0.622"/>
-  <testcase name="checkGetCards()" classname="test.get.GetCardsTest" time="0.769"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

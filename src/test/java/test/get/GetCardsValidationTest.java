@@ -4,6 +4,8 @@ import arguments.holders.AuthValidationArgumentsHolder;
 import arguments.holders.CardIdValidationArgumentsHolder;
 import arguments.providers.AuthValidationArgumentsProvider;
 import arguments.providers.CardIdValidationArgumentsProvider;
+import consts.CardsEndpoints;
+import consts.UrlParamValues;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
@@ -13,8 +15,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import test.BaseTest;
 
-import java.util.Map;
-
 public class GetCardsValidationTest extends BaseTest {
 
     @ParameterizedTest
@@ -22,7 +22,7 @@ public class GetCardsValidationTest extends BaseTest {
     public void checkGetCardWithInvalidId(CardIdValidationArgumentsHolder validationArguments) {
         Response response = requestWithAuth()
                 .pathParams(validationArguments.getPathParams())
-                .get("/1/cards/{id}");
+                .get(CardsEndpoints.GET_CARD_URL);
         response
                 .then()
                 .statusCode(validationArguments.getStatusCode());
@@ -34,8 +34,8 @@ public class GetCardsValidationTest extends BaseTest {
     public void checkGetCardWithInvalidAuth(AuthValidationArgumentsHolder validationArguments) {
         Response response = requestWithoutAuth()
                 .queryParams(validationArguments.getAuthparams())
-                .pathParam("id", "64de10a02fea9c85563a7038")
-                .get("/1/cards/{id}");
+                .pathParam("id", UrlParamValues.EXISTING_CARD_ID)
+                .get(CardsEndpoints.GET_CARD_URL);
         response
                 .then()
                 .statusCode(401);
@@ -45,12 +45,9 @@ public class GetCardsValidationTest extends BaseTest {
     @Test
     public void checkGetCardWithAnotherUserCredentials() {
         Response response = requestWithoutAuth()
-                .queryParams(Map.of(
-                        "key", "73f7a097a4567b388231c8ea06e7866d",
-                        "token", "018459018349936a264bdcb07b41fa4b538b501ef504fee5d07ea9f86b953e9\n"
-                ))
-                .pathParam("id", "64de10a02fea9c85563a7038")
-                .get("/1/cards/{id}");
+                .queryParams(UrlParamValues.ANOTHER_USER_AUTH_QUERY_PARAMS)
+                .pathParam("id", UrlParamValues.EXISTING_CARD_ID)
+                .get(CardsEndpoints.GET_CARD_URL);
         response
                 .then()
                 .statusCode(401);
@@ -70,8 +67,8 @@ public class GetCardsValidationTest extends BaseTest {
     @Test
     public void checkGetCard() {
         requestWithAuth()
-                .pathParam("id", "64de10a02fea9c85563a7038")
-                .get("/1/cards/{id}")
+                .pathParam("id", UrlParamValues.EXISTING_CARD_ID)
+                .get(CardsEndpoints.GET_CARD_URL)
                 .then()
                 .statusCode(200)
                 .body("name", Matchers.equalTo("New card"))
