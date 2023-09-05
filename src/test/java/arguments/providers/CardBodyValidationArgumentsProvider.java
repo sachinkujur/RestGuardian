@@ -10,26 +10,27 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 public class CardBodyValidationArgumentsProvider implements ArgumentsProvider {
+
     @Override
-    public Stream provideArguments(ExtensionContext extensionContext) {
+    public Stream provideArguments(ExtensionContext context) {
         return Stream.of(
                 new CardBodyValidationArgumentsHolder(
                         Map.of(
-                                "name", "12345",
+                                "name", 12345,
                                 "idList", UrlParamValues.EXISTING_LIST_ID
                         ),
                         "invalid value for name"
                 ),
                 new CardBodyValidationArgumentsHolder(
                         Map.of(
-                                "name", "new card"
+                                "name", "New card"
                         ),
                         "invalid value for idList"
                 ),
                 new CardBodyValidationArgumentsHolder(
                         Map.of(
                                 "name", "New card",
-                                "idLsit", "invalid"
+                                "idList", "invalid"
                         ),
                         "invalid value for idList"
                 )

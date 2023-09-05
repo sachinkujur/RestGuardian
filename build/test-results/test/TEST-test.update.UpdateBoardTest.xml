@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.update.UpdateBoardTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-05T10:52:48" hostname="MDEVPC-157" time="3.794">
+  <properties/>
+  <testcase name="checkUpdateBoard()" classname="test.update.UpdateBoardTest" time="3.794"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
