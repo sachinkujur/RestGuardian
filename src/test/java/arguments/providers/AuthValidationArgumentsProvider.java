@@ -17,13 +17,16 @@ public class AuthValidationArgumentsProvider implements ArgumentsProvider {
         return Stream.of(
                 new AuthValidationArgumentsHolder(
                         Collections.emptyMap(),
-                        "invalid key"),
+                        "invalid key"
+                ),
                 new AuthValidationArgumentsHolder(
                         Map.of("key", UrlParamValues.VALID_KEY),
-                        "unauthorized permission requested"),
+                        "unauthorized card permission requested"
+                ),
                 new AuthValidationArgumentsHolder(
                         Map.of("token", UrlParamValues.VALID_TOKEN),
-                        "invalid key")
+                        "invalid key"
+                )
         ).map(Arguments::of);
     }
 }

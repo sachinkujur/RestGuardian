@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.update.UpdateCardValidationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-05T12:18:18" hostname="MDEVPC-157" time="4.766">
+  <properties/>
+  <testcase name="[1] arguments.holders.AuthValidationArgumentsHolder@5f2606b" classname="test.update.UpdateCardValidationTest" time="1.878"/>
+  <testcase name="[2] arguments.holders.AuthValidationArgumentsHolder@38c9e0d6" classname="test.update.UpdateCardValidationTest" time="0.623"/>
+  <testcase name="[3] arguments.holders.AuthValidationArgumentsHolder@4b4ee511" classname="test.update.UpdateCardValidationTest" time="0.527"/>
+  <testcase name="[1] arguments.holders.CardIdValidationArgumentsHolder@71f1cc02" classname="test.update.UpdateCardValidationTest" time="0.579"/>
+  <testcase name="[2] arguments.holders.CardIdValidationArgumentsHolder@561953e3" classname="test.update.UpdateCardValidationTest" time="0.572"/>
+  <testcase name="checkUpdateCardWithAnotherUserCredentials()" classname="test.update.UpdateCardValidationTest" time="0.574"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
