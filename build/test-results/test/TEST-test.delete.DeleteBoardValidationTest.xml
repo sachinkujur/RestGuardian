@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.delete.DeleteBoardValidationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-06T10:17:51" hostname="MDEVPC-157" time="5.417">
+  <properties/>
+  <testcase name="[1] arguments.holders.BoardIdValidationArgumentsHolder@5f2606b" classname="test.delete.DeleteBoardValidationTest" time="2.526"/>
+  <testcase name="[2] arguments.holders.BoardIdValidationArgumentsHolder@288f173f" classname="test.delete.DeleteBoardValidationTest" time="0.582"/>
+  <testcase name="[1] arguments.holders.AuthValidationArgumentsHolder@6d60899e" classname="test.delete.DeleteBoardValidationTest" time="0.568"/>
+  <testcase name="[2] arguments.holders.AuthValidationArgumentsHolder@7da31a40" classname="test.delete.DeleteBoardValidationTest" time="0.545"/>
+  <testcase name="[3] arguments.holders.AuthValidationArgumentsHolder@44d64d4e" classname="test.delete.DeleteBoardValidationTest" time="0.569"/>
+  <testcase name="checkDeleteBoardWithAnotherUserCredentials()" classname="test.delete.DeleteBoardValidationTest" time="0.613"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
