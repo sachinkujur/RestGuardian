@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.delete.DeleteCardValidationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-09-06T10:36:55" hostname="MDEVPC-157" time="4.631">
+  <properties/>
+  <testcase name="[1] arguments.holders.CardIdValidationArgumentsHolder@5f2606b" classname="test.delete.DeleteCardValidationTest" time="1.849"/>
+  <testcase name="[2] arguments.holders.CardIdValidationArgumentsHolder@288f173f" classname="test.delete.DeleteCardValidationTest" time="0.571"/>
+  <testcase name="[1] arguments.holders.AuthValidationArgumentsHolder@6d60899e" classname="test.delete.DeleteCardValidationTest" time="0.562"/>
+  <testcase name="[2] arguments.holders.AuthValidationArgumentsHolder@7da31a40" classname="test.delete.DeleteCardValidationTest" time="0.578"/>
+  <testcase name="[3] arguments.holders.AuthValidationArgumentsHolder@44d64d4e" classname="test.delete.DeleteCardValidationTest" time="0.524"/>
+  <testcase name="checkDeleteCardWithAnotherUserCredentials()" classname="test.delete.DeleteCardValidationTest" time="0.537"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
