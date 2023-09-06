@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.delete.DeleteCardTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-06T09:38:52" hostname="MDEVPC-157" time="4.556">
+  <properties/>
+  <testcase name="checkDeleteCard()" classname="test.delete.DeleteCardTest" time="4.556"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
